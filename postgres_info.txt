@@ -1,0 +1,12 @@
+Postgres requirements to set-up database
+
+1. CREATE DATABASE focus25;
+2. CREATE USER focus25 WITH PASSWORD 'focus25';
+3. ALTER ROLE focus25 SET client_encoding TO 'utf8';
+4. ALTER ROLE focus25 SET default_transaction_isolation TO 'read committed';
+5. ALTER ROLE focus25 SET timezone TO 'UTC';
+6. GRANT ALL PRIVILEGES ON DATABASE focus25 TO focus25;
+
+That's all.
+
+\q <-- to exit SQL prompt
