@@ -10,3 +10,6 @@ Postgres requirements to set-up database
 That's all.
 
 \q <-- to exit SQL prompt
+
+More information about postgres and django process:
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
