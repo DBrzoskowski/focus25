@@ -37,8 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # cors setup
     'corsheaders',
+    # django rest framework
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    # social
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    # our apps
+
 ]
 
 MIDDLEWARE = [
@@ -128,3 +141,5 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = (
      'localhost:3000/'  # 3000 it's a frontend port
  )
+
+SITE_ID = 1
