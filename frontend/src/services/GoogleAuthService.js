@@ -8,7 +8,6 @@ const googleLogin = async (accesstoken) => {
       }
     );
     console.log(res);
-
     return await res.status;
   };
 
