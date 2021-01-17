@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     # our apps
+    'google_auth',
 
 ]
 
@@ -138,8 +139,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CORS_ORIGIN_WHITELIST = (
-     'localhost:3000/'  # 3000 it's a frontend port
- )
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000', # 3000 it's a frontend port
+    'http://localhost:8000',
+    'http://localhost:8080',
+]
 
 SITE_ID = 1
