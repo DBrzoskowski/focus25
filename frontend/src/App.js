@@ -15,10 +15,11 @@ class App extends Component {
     return (
       <div className="App">
         <GoogleLogin
-          clientId="<GOOGLE CLIENT ID>"
+          clientId="922438377414-nclhsj3bve0m39gdu7jnq67uj7u261o4.apps.googleusercontent.com"
           buttonText="LOGIN WITH GOOGLE"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
+          cookiePolicy={'single_host_origin'}
         />
 
       </div>

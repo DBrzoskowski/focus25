@@ -37,17 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     # cors setup
     'corsheaders',
     # django rest framework
-    'rest_framework',
-    'rest_framework.authtoken',
-    'rest_auth',
-    # social
-    'django.contrib.sites',
+    # 'rest_framework',
+    # 'rest_framework.authtoken',
+    # 'rest_auth',
     'allauth',
     'allauth.account',
-    'rest_auth.registration',
+    # 'rest_auth.registration',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     # our apps
@@ -82,6 +81,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
@@ -140,7 +144,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000', # 3000 it's a frontend port
+    'http://localhost:3000',  # 3000 it's a frontend port
     'http://localhost:8000',
     'http://localhost:8080',
 ]
