@@ -145,7 +145,9 @@ class Pomodoro extends Component {
     const { types } = this.props;
 
     return (
+
       <div className="Content">
+
         <div className="Pomodoro">
           <TypeSelect
             types={types}

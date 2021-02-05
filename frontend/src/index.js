@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
-import Pomodoro from './containers/Pomodoro';
+import {BrowserRouter} from "react-router-dom";
+import App from "./containers/App";
 
 ReactDOM.render(
   <DndProvider backend={HTML5Backend}>
-    <Pomodoro />
+      <BrowserRouter>
+        <App />
+    </BrowserRouter>
   </DndProvider>,
   document.getElementById('root')
 );
