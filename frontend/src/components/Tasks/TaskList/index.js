@@ -3,7 +3,8 @@ import produce from 'immer';
 import TaskContext from './context';
 import Task from '../Task';
 import TypeSelect from '../../TypeSelect';
-
+import ReminderSchema from "../../reminders/ReminderForm";
+import {Formik} from "formik";
 import './styles.css';
 
 const TaskList = ({ selectedTaskType }) => {
@@ -83,6 +84,10 @@ const TaskList = ({ selectedTaskType }) => {
           placeholder="New Task"
         />
         <span onClick={addTask}>{'Add'}</span>
+        <Formik
+            validationSchema={ReminderSchema}
+            onSubmit={{id: tasks.id, description: input}}
+         initialValues={{}}/>
       </div>
     </TaskContext.Provider>
   );

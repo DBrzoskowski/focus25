@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     # cors setup
     'corsheaders',
     # django rest framework
-    # 'rest_framework',
-    # 'rest_framework.authtoken',
-    # 'rest_auth',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
     'allauth',
     'allauth.account',
-    # 'rest_auth.registration',
+    'rest_auth.registration',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     # our apps
@@ -150,3 +150,5 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 SITE_ID = 1
+
+CORS_ORIGIN_ALLOW_ALL = True

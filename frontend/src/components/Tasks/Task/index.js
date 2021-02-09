@@ -38,9 +38,12 @@ export default function Task({ task, index }) {
   return (
     <div ref={ref} className={isDragging ? 'Task Dragging' : 'Task'}>
       <div>{task.title}</div>
-      <span onClick={() => handleStatus(task)}>
-        {task.closed ? 'Open' : 'Close'}
-      </span>
+      <div>
+      <button onClick={() => window.location.pathname='/task-detail/' + task.id}>DETAILS</button>
+        <span onClick={() => handleStatus(task)}>
+          {task.closed ? 'Open' : 'Close'}
+        </span>
+      </div>
     </div>
   );
 }

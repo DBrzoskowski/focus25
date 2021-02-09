@@ -19,6 +19,5 @@ from google_auth.views import GoogleLogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    # path('rest-auth/google/', GoogleLogin.as_view(), name='google_login')
+    path('rest-auth/google/', GoogleLogin.as_view(), name='google_login')
 ]
